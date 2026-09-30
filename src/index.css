@@ -1,0 +1,140 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+
+@theme {
+  --font-sans: 'Inter Variable', 'Inter', sans-serif;
+  --color-ink: #17152B;
+  --color-body: #68708A;
+  --color-muted: #8A92A6;
+  --color-line: #F1DDE8;
+  --color-brand-pink: #F34F97;
+  --color-brand-pink-dark: #CE35A8;
+  --color-success: #22B573;
+  --color-brand-pink-soft: #FFF0F6;
+  --color-brand-purple: #6C4DE8;
+  --color-brand-purple-soft: #f1edff;
+  --shadow-card: 0 10px 34px -12px rgb(190 120 220 / 0.22);
+  --shadow-pop: 0 24px 60px -16px rgb(80 40 140 / 0.35);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    margin: 0;
+    background-color: #FCF9FF;
+    color: var(--color-ink);
+  }
+  button {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand-purple);
+    outline-offset: 2px;
+  }
+}
+
+/*
+ * Typography scale – mobile ≤767px (base), tablet 768–1279px (md), desktop ≥1280px (xl).
+ * Every font size in the app comes from one of these utilities.
+ */
+@utility type-page {
+  font-size: 30px;
+  line-height: 38px;
+  @media (min-width: 768px) { font-size: 38px; line-height: 48px; }
+  @media (min-width: 1280px) { font-size: 48px; line-height: 60px; }
+}
+@utility type-heading {
+  font-size: 18px;
+  line-height: 24px;
+  @media (min-width: 768px) { font-size: 20px; line-height: 26px; }
+  @media (min-width: 1280px) { font-size: 22px; line-height: 28px; }
+}
+@utility type-trend-title {
+  font-size: 24px;
+  line-height: 32px;
+  @media (min-width: 768px) { font-size: 28px; line-height: 36px; }
+  @media (min-width: 1280px) { font-size: 32px; line-height: 40px; }
+}
+@utility type-section {
+  font-size: 20px;
+  line-height: 1.2;
+  @media (min-width: 768px) { font-size: 22px; }
+  @media (min-width: 1280px) { font-size: 24px; }
+}
+@utility type-card {
+  font-size: 16px;
+  line-height: 1.3;
+  @media (min-width: 768px) { font-size: 17px; }
+  @media (min-width: 1280px) { font-size: 18px; }
+}
+@utility type-card-sm {
+  font-size: 14px;
+  line-height: 1.3;
+  @media (min-width: 768px) { font-size: 15px; }
+  @media (min-width: 1280px) { font-size: 16px; }
+}
+@utility type-card-desc {
+  font-size: 11px;
+  line-height: 1.4;
+  @media (min-width: 768px) { font-size: 12px; }
+}
+@utility type-body {
+  font-size: 13px;
+  line-height: 1.55;
+  @media (min-width: 768px) { font-size: 14px; }
+}
+@utility type-secondary {
+  font-size: 12px;
+  line-height: 1.5;
+  @media (min-width: 768px) { font-size: 13px; }
+}
+@utility type-label {
+  font-size: 11px;
+  line-height: 1.4;
+  @media (min-width: 1280px) { font-size: 12px; }
+}
+@utility type-button {
+  font-size: 12px;
+  line-height: 1.25;
+  @media (min-width: 768px) { font-size: 13px; }
+}
+@utility type-nav {
+  font-size: 13px;
+  line-height: 1.25;
+}
+@utility type-metric {
+  font-size: 22px;
+  line-height: 1.1;
+  @media (min-width: 768px) { font-size: 25px; }
+  @media (min-width: 1280px) { font-size: 28px; }
+}
+@utility type-score {
+  font-size: 24px;
+  line-height: 1;
+  @media (min-width: 768px) { font-size: 28px; }
+  @media (min-width: 1280px) { font-size: 32px; }
+}
+@utility type-chart {
+  font-size: 10px;
+  line-height: 1.2;
+  @media (min-width: 1280px) { font-size: 11px; }
+}
+@utility type-badge {
+  font-size: 10px;
+  line-height: 1.2;
+  @media (min-width: 1280px) { font-size: 11px; }
+}
+@utility type-patient-name {
+  font-size: 14px;
+  line-height: 1.2;
+  @media (min-width: 768px) { font-size: 15px; }
+  @media (min-width: 1280px) { font-size: 16px; }
+}
+@utility type-patient-detail {
+  font-size: 11px;
+  line-height: 1.35;
+  @media (min-width: 1280px) { font-size: 12px; }
+}
